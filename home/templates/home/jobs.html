@@ -1,0 +1,165 @@
+{% extends 'base/base.html' %}
+{% block content  %}
+<style>
+.heading{
+	text-align: center;
+}	
+.first{
+	padding: 5px;
+	border: ridge;
+	background: #494d45;
+	border-color:;
+}
+.hover{
+padding: 5px;
+}
+.hover:hover{
+	border: ridge;
+	border-radius: 10px;
+	background-color: green;
+	color: white;
+}
+.sidebar:hover{
+	color: white;
+}
+.sidebar{
+	color: #fff;
+	padding-left: 5px;
+}
+.card{
+	margin:8px;
+
+}
+.second{
+  margin-top: 10px;
+}
+.one-edge-shadow:hover {
+  box-shadow: 0 8px 6px -6px black;
+}
+.MNC{
+  color:#fff;
+  font-size: 20px;
+}
+.MNC:hover{
+  color: yellow;
+  font-weight: 700;
+}
+</style>
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-md-2 first"> 
+  <div class="hover"><a class="sidebar" href=""> EXAM SCHEDULE</a> </div>
+  <div class="hover"><a class="sidebar" href=""> ONLINE EXAM MOKE TEST</a> </div> 
+  <div class="hover"><a class="sidebar" href=""> QUESTIONS PAPER</a> </div> 
+  <div class="hover"><a class="sidebar" href=""> 2020 QUESTION PAPER</a> </div>
+  <div class="hover"><a class="sidebar" href=""> SOLVED QUESTION PAPER</a> </div>
+  <div class="hover"><a class="sidebar" href=""> RIGHT TO INFORMATION</a> </div>
+  <div class="hover"><a class="sidebar" href=""> MODEL ANSWER</a> </div> 
+  <div class="hover"><a class="sidebar" href=""> SLLABUS</a> </div> 
+  <div class="hover"><a class="sidebar" href=""> RESULT</a> </div> 
+ </div>
+ <div class="col-md-7" style="margin-left: 13px;">
+  <div class="row">
+                  {% for seat in vacancy  %}
+   <div class="card one-edge-shadow" style="width: 18rem; background-color:#ededed">
+   <div class="card-body">
+    <h5 class="card-title" style="color:">{{seat.title }}</h5>
+    <h6 class="card-subtitle mb-2 "> {{seat.post}} </h6>
+    <h6 class="card-subtitle mb-2 text-muted"> total seats: {{seat.seats}}</h6>
+    <p class="card-text"> <b>FORM AVAIABLE </b> </p>
+  
+  <!-- ----------------------------buttons----------------------------- -->
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-primary active">
+      <input type="radio" name="options" id="option1" autocomplete="off" checked>
+      <a href="/detail/{{seat.id}}" style="color: white;">more details</a>
+  </label>                    
+  <label class="btn btn-success">
+    <input type="radio" name="options" id="option2" autocomplete="off">
+    <a href="{{seat.main_website}}" style="color: white;"> Apply </a>
+  </label>
+</div>
+   
+<!-- ----------------------------------------------------------- -->
+
+
+  </div>
+</div>
+                        {% endfor %}
+  </div>                      
+</div>
+<div class="col-md-2">
+ <div class="card" style="height: 300px;"> 
+  <h6 class="card-header">MNC JOB REQUIREMENT </h6>
+  <div class="card-body" style="background-color:#45464a; text-align: center;">
+  <marquee direction="up" scrolldelay="100" behaviour="scroll" onmouseover="stop()" 
+   onmouseout="start()" height="270px;"> 
+    <a href="" class="MNC"> Tata services </a> <br>
+    <a href="" class="MNC"> Infosis  </a>  <br>
+    <a href="" class="MNC"> Tech Mahindra </a><br>
+    <a href="" class="MNC"> Wirpo      </a><br>
+    <a href="" class="MNC"> Nexa      </a> <br>
+    <a href="" class="MNC"> IBM      </a> <br>
+
+  </marquee>
+
+
+  </div>
+ </div>
+ </div>
+ </div>  <!-- row endtag -->
+</div>    <!-- container end tag -->
+
+
+<div class="container">
+<div class="row second">
+<div class="col-md-4">
+
+<div class="card">
+  <h5 class="card-header" align="center">LATEST JOBS</h5>
+   <div class="card-body">
+    <a href="#"> SSC CGL admitcard</a><br>
+    <a href="#"> SSC CGL admitcard</a> <br>
+    <a href="#"> SSC CGL admitcard</a> <br>
+    <a href="#"> SSC CGL admitcard</a> <br>
+    <a href="#"> SSC CGL admitcard</a><br>
+   </div>
+ </div>	
+</div>
+<div class="col-md-4">
+	<div class="card">
+  <h5 class="card-header" align="center">UNIVERSITY</h5>
+  <div class="card-body">
+    <a href="#"> RGPV, BHOPAL</a><br>
+    <a href="#"> DR. HARISINGH GOUR, SAGAR</a><br>
+    <a href="#"> JIWAJI UNIVERSITY, GWALIOR</a><br>
+    <a href="#"> DEVI AHLIYABAI UNIVERSITY,INDORE</a><br>
+    <a href="#"> SWAMI VIVEKANAND UNIVERSITY,SAGAR</a><br>
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+	<div class="card">
+  <h5 class="card-header" align="center">RESULT</h5>
+  <div class="card-body">
+    <a href="#"> SSC CGL Tier-1</a><br>
+    <a href="#"> State Bank of India</a><br>
+    <a href="#"> Railway group d</a><br>
+    <a href="#"> Forest guard ,MP</a><br>
+    <a href="#"> MPPSC prelims, 2019</a><br>
+  </div>
+</div>
+</div>
+
+	
+
+</div>
+</div>
+
+
+
+
+
+
+{%  endblock  %}

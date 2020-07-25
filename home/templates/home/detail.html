@@ -1,0 +1,110 @@
+{% extends 'base/base.html' %}
+{% block content  %}
+<style>
+  .one-edge-shadow {
+  box-shadow: 0 8px 6px -6px black;
+}
+#shadow:hover{
+   box-shadow: 0 8px 6px -6px #5f615f;
+}
+
+
+</style>
+<div class="container">
+	
+<div class="col-md-12" style="margin-top: 10px;">
+ <div class="card one-edge-shadow">
+  <div class="card-body" style="background-color:;">
+    <h5 align="center"> <b> Name of exam: </b>{{vacancy.title }}  </h5>
+    <hr style="height: 1px; background-color: red;">
+	<p> <b> post date: </b>{{vacancy.updatedat  }}</p>
+	<p> <b> Description: </b>{{ vacancy.description }}   </p>
+   </div>
+  </div>		
+</div>
+    
+
+<div class="row" style="margin-left: 15px; margin-top: 10px;">
+	<div class="col-md-6"> 
+  <div class="card" id="shadow" style="width: 33rem; background-color: #e5e6e3;">
+  <div class="card-body">
+    <h5 class="card-title" align="center">IMPORTANT DATES</h5>
+    <hr style="background-color: grey; height: 1px">
+    <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6 -->
+    	<p> <b>  Application begin :</b> {{vacancy.regis_start }}   </p>
+  		<p> <b>Application updated : </b>{{vacancy.  }} </p>
+  		<p> <b>Application end : </b>{{vacancy.regis_end  }}  </p>
+  		<p> <b>Exam date :</b> {{vacancy.exam_date  }}  </p>
+  		<hr>
+    </div>
+   </div>
+  </div>
+ <div class="col-md-6">
+<div class="card" id="shadow" style="width: 25rem; background-color:#e5e6e3">
+  <div class="card-body">
+    <h5 class="card-title" align="center">APPLICATION FEES</h5>
+    <hr style="background-color: grey; height: 1px">
+      <p> <b> General :</b> {{vacancy.exam_fees_general}} Rs</p>
+  		<p> <b> OBC : </b> {{vacancy.exam_fees_obc  }} Rs</p>
+  		<p> <b> SC/St : </b> {{vacancy.exam_fees_sc  }} Rs </p>
+  		<p> <b> portal charge : </b> {{vacancy.portal_fee}} Rs </p>
+ <hr>
+  </div>
+</div>
+</div>
+</div>
+ <!-- -----------------------eligibility crietria---------------------->
+  <div class="row" style="margin-top: 10px; margin-left: 10px;">
+  <div class="col-sm-6">
+    <div class="card" id="shadow" style="background-color: #e3e3e3">
+      <div class="card-body">
+        <h5 class="card-title">Eligibility</h5>
+        <p class="card-text">{{vacancy.eligibility }}</p>
+        <hr style="background-color:#646669">
+        <h5 class="card-title">Total post: {{vacancy.seats}}</h5> 
+        <p class="card-text"><b>Min Age : 21 years old </b></p>
+        <p class="card-text"> <b>Max Age : {{vacancy.age_limit}} </b></p>
+        <p class="card-text"><b>Age</b> Relaxation Extra as per Rules </p>
+       </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card" id="shadow" style="width: 25em; ;background-color: #e3e3e3" >
+      <div class="card-body">
+        <h5 class="card-title" style="color: blue">Some useful links</h5>
+        <hr style="background-color: grey">
+        <p class="card-text"><b> Notification:</b>
+          <a href="{{vacancy.notification}}" class="btn btn-primary">
+            <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download <i class="fa fa-download" aria-hidden="true"></i>
+          </a> 
+        </p>
+        <p class="card-text"><b>Official Website :</b> 
+          <a href="{{vacancy.main_website}}" class="btn btn-primary"> click me</a> 
+        </p>
+        <p class="card-text"><b>Apply online :</b> 
+          <a href="{{vacancy.main_website}}" class="btn btn-success"> Apply <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a> 
+        </p>
+        <p class="card-text"><b>Edit Form:    </b><a href="" class="">Click here</a> </p>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- --------------------------------------------------------------------- -->
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+  
+  {%  endblock  %}

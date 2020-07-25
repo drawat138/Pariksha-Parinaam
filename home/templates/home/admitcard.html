@@ -1,0 +1,59 @@
+{% extends 'base/base.html' %}
+    {% block content  %}
+    {% load static %}
+<style>
+.polaroid {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}	
+</style>
+<div class="container-fluid">
+ <div class="row" style="margin-top: 10px">
+ <div class="col-md-2">
+  <div class="card" style="width: 18rem;">
+  	 <div class="card-header text-center"> Others </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Cras justo odio</li>
+      <li class="list-group-item">Dapibus ac facilisis in</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+  </div>	
+ </div> 
+ <div class="col-md-7" style="margin-left: 100px; margin-bottom: 50px;">
+  <div class="card" style="width: 55rem;">
+  <div class="card-header text-center bg-secondary"style="color: white"> <b> Admit Card </b> </div>
+    <ul class="list-group list-group-flush">
+     <li class="list-group-item"><a href=" ">UPPSC Pre 2020 Exam Postponed </a></li>
+     <li class="list-group-item"><a href=" ">UPSC NDA I Exam Date 2020 </a></li>
+     <li class="list-group-item"><a href=" ">UPSC IAS / IFS Pre New Exam Date 2020 </a></li>
+     <li class="list-group-item"><a href=" ">UP Police Jail Warden /Fireman Exam Date 2020</a></li>
+     <li class="list-group-item"><a href=" ">SSC CHSL Left Over Paper Exam Date 2020   </a></li>
+     <li class="list-group-item"><a href=" ">SSC Stenographer 2019 Exam Date 2020   </a></li>
+     <li class="list-group-item"><a href=" ">NTA NCHMJEE Exam Date 2020   </a></li>
+     <li class="list-group-item"><a href=" ">NTA NCHMJEE Exam Date 2020   </a></li>
+     <li class="list-group-item"><a href=" ">NTA NCHMJEE Exam Date 2020   </a></li>
+     <li class="list-group-item"><a href=" ">NTA NCHMJEE Exam Date 2020   </a></li>
+     
+   </ul>
+  </div>
+ </div>
+ <div class="col-md-2">   
+   <div class="card polaroid" style="width: 19rem;">
+   <img class="card-img-top" src="{% static 'images/book.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+   </div>
+ </div>
+</div>
+</div>
+</div>
+
+
+
+
+ {%  endblock %}
